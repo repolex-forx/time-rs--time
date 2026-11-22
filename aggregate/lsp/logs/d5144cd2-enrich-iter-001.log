@@ -1,0 +1,27 @@
+[2026-11-22T02:32:36Z] === ENRICH ITERATION 1 START | repo=time-rs/time sha=d5144cd2 ===
+[2026-11-22T02:32:36Z] [iter=1] PHASE START: enrich repo=time-rs/time sha=d5144cd2 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/d5144cd2-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/d5144cd2874862d46466c900910cd8577d066019.nq.gz
+[2026-11-22T02:32:36Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=77 MB
+[2026-11-22T02:32:45Z] [iter=1] AST store loaded triples=1554007 load_secs=8 mem_mb=841 MB
+[2026-11-22T02:32:45Z] [iter=1] Step 2: Finding LSP targets mem_mb=841 MB
+[2026-11-22T02:32:47Z] [iter=1] LSP targets found call_sites=10415 imports=427 extends=0 implements=77 secs=2
+[2026-11-22T02:32:48Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=841 MB
+[2026-11-22T02:32:53Z] [iter=1] Position index built positions=103123 nodes_with_types=120288 secs=5 mem_mb=841 MB
+[2026-11-22T02:32:53Z] [iter=1] Step 3: Starting LSP resolution mem_mb=841 MB already_completed_types=[] already_completed_files=0
+[2026-11-22T02:32:53Z] [iter=1] Resolving target type target_type=call_site count=10415
+[2026-11-22T02:33:11Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.6 files_done=0 resolved=0 errors=0 current=time-macros/src/error.rs
+[2026-11-22T02:34:04Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.5 files_done=3 resolved=169 errors=0 current=time/src/formatting/mod.rs
+[2026-11-22T02:34:50Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.2 files_done=11 resolved=493 errors=0 current=time/tests/integration/utc_date_time.rs
+[2026-11-22T02:36:16Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.7 files_done=29 resolved=1000 errors=0 current=time/src/parsing/combinator/mod.rs
+[2026-11-22T02:37:28Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.9 files_done=34 resolved=1358 errors=0 current=time/src/utc_date_time.rs
+[2026-11-22T02:38:25Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.8 files_done=35 resolved=1542 errors=0 current=time/src/tests.rs
+[2026-11-22T02:39:53Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=7.3 files_done=44 resolved=1857 errors=0 current=time-macros/src/to_tokens.rs
+[2026-11-22T02:40:24Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=7.8 files_done=91 resolved=2033 errors=0 current=time-macros/src/format_description/mod.rs
+[2026-11-22T02:40:50Z] [iter=1] Target type resolved target_type=call_site resolved=2163 errors=0 secs=477 mem_mb=841 MB
+[2026-11-22T02:40:50Z] [iter=1] Resolving target type target_type=import_statement count=427
+[2026-11-22T02:40:55Z] [iter=1] HEARTBEAT target_type=import_statement elapsed_min=8.3 files_done=1 resolved=0 errors=0 current=time/src/parsing/combinator/rfc/rfc2822.rs
+[2026-11-22T02:41:00Z] [iter=1] Target type resolved target_type=import_statement resolved=165 errors=0 secs=10 mem_mb=841 MB
+[2026-11-22T02:41:00Z] [iter=1] Resolving target type target_type=implements_clause count=77
+[2026-11-22T02:41:09Z] [iter=1] Target type resolved target_type=implements_clause resolved=14 errors=0 secs=9 mem_mb=841 MB
+[2026-11-22T02:46:05Z] [iter=1] Step 5: Writing final enrichment file triples=48703
+[2026-11-22T02:46:06Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/d5144cd2874862d46466c900910cd8577d066019.nq.gz size_kb=984
+[2026-11-22T02:46:06Z] [iter=1] PHASE END: enrich elapsed_s=810 elapsed_min=13.5 total_triples=48703
